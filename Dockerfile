@@ -4,6 +4,7 @@ MAINTAINER nori007 <nori007.naver.com>
 
 ARG PROJECT_TARGET=dockerAndGolang
 RUN cd /go/src
+RUN pwd
 RUN git clone https://github.com/nori007/$PROJECT_TARGET
 
 RUN cd /go/src/$PROJECT_TARGET
