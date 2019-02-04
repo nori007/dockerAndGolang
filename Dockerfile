@@ -3,14 +3,15 @@ MAINTAINER nori007 <nori007.naver.com>
 
 
 ARG PROJECT_TARGET=dockerAndGolang
-RUN cd /go/src
+WORKDIR /go/src
 RUN pwd
 RUN git clone https://github.com/nori007/$PROJECT_TARGET
 
-RUN cd /go/src/$PROJECT_TARGET
+WORKDIR /go/src/$PROJECT_TARGET
+RUN pwd
 RUN go build .
 
-ENTRYPOINT /go/src/$PROJECT_TARGET
+# ENTRYPOINT /go/src/$PROJECT_TARGET
 
 EXPOSE 6800
 CMD [$PROJECT_TARGET]
