@@ -10,6 +10,7 @@ RUN git clone https://github.com/nori007/$PROJECT_TARGET
 WORKDIR /go/src/$PROJECT_TARGET
 RUN pwd
 RUN go build .
+RUN ls -al
 
 # ENTRYPOINT /go/src/$PROJECT_TARGET
 
