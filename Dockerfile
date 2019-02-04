@@ -14,5 +14,6 @@ RUN ls -al
 
 # ENTRYPOINT /go/src/$PROJECT_TARGET
 
-# EXPOSE 6800
-CMD ["./dockerAndGolang"]
+EXPOSE 6800
+# CMD ["./dockerAndGolang"]
+CMD %PROJECT_TARGET
