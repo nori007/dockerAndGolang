@@ -16,4 +16,4 @@ RUN ls -al
 
 EXPOSE 6800
 # CMD ["./dockerAndGolang"]
-CMD %PROJECT_TARGET
+CMD ["sh", "-c", "$PROJECT_TARGET"]
